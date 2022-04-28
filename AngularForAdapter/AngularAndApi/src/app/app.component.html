@@ -1,0 +1,38 @@
+<h1 style="margin-bottom: 20px;">{{Title}}</h1>
+<div class="all">
+  <div class="left">
+    <form #UserPost="ngForm" class="formInput">
+      <input type="text" placeholder="Nhập hộ mấy chữ" ngModel name="stringInput" />
+      <div class="buttonColumn">
+        <div class="buttonColumnPart">
+          <button type="submit" (click)="StringToBase64(UserPost.value)" class="btn btn-primary">String to
+            Base64</button>
+          <button type="submit" (click)="StringToByte(UserPost.value)" class="btn btn-primary">String to Byte</button>
+          <button type="submit" (click)="StringToHex(UserPost.value)" class="btn btn-primary">String To Hex</button>
+        </div>
+        <div class="buttonColumnPart">
+          <button type="submit" (click)="HexToString(UserPost.value)" class="btn btn-primary">Hex To String</button>
+          <button type="submit" (click)="Base64ToString(UserPost.value)" class="btn btn-primary">Base64 To
+            String</button>
+          <button type="submit" (click)="ByteToString(UserPost.value)" class="btn btn-primary">Byte To String</button>
+        </div>
+        <div class="buttonColumnPart">
+          <button type="submit" (click)="HexToBase64(UserPost.value)" class="btn btn-primary">Hex To Base64</button>
+          <button type="submit" (click)="Base64ToHex(UserPost.value)" class="btn btn-primary">Base64 To Hex</button>
+          <button type="submit" (click)="ByteToHex(UserPost.value)" class="btn btn-primary">Byte to Hex</button>
+        </div>
+        <div class="buttonColumnPart">
+          <button type="submit" (click)="HexToByte(UserPost.value)" class="btn btn-primary">Hex to Byte</button>
+          <button type="submit" (click)="Base64ToByte(UserPost.value)" class="btn btn-primary">Base64 To Byte</button>
+          <button type="submit" (click)="ByteToBase64(UserPost.value)" class="btn btn-primary">Byte to Base64</button>
+
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="right">
+    <h2>ConvertType: {{ConvertType}}</h2>
+    <h2>Box value is: {{DisplayValue}}</h2>
+  </div>
+
+</div>
